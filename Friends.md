@@ -129,6 +129,7 @@
   }
 }
 ```
+---
 ### POST `/api/messenger/friends/sent` | *api.messenger.friends.sent.store*
 #### Payload:
 ```json
