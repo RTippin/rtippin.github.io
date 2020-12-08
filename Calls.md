@@ -498,6 +498,6 @@
 #### Response:
 ```json
 {
-  "message": "success",
+  "message": "success"
 }
 ```
