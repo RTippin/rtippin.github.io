@@ -373,3 +373,68 @@
   }
 }
 ```
+---
+### GET `/api/messenger/active-calls` | *api.messenger.active.calls*
+#### Response:
+```json
+[
+  {
+    "id": "923142e6-88bd-48c6-a253-94f1fd587686",
+    "active": true,
+    "type": 1,
+    "type_verbose": "VIDEO",
+    "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+    "created_at": "2020-12-08T04:45:34.000000Z",
+    "updated_at": "2020-12-08T04:45:35.000000Z",
+    "owner_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+    "owner_type": "App\\Models\\User",
+    "owner": {
+      "name": "Jane Doe",
+      "route": null,
+      "provider_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+      "provider_alias": "user",
+      "base": {
+        "id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+        "name": "Jane Doe",
+        "avatar": null,
+        "created_at": "2020-12-07T07:57:14.000000Z",
+        "updated_at": "2020-12-08T04:45:53.000000Z"
+      },
+      "api_avatar": {
+        "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+      },
+      "avatar": {
+        "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+      }
+    },
+    "meta": {
+      "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+      "thread_type": 1,
+      "thread_type_verbose": "PRIVATE",
+      "thread_name": "Jane Doe",
+      "api_thread_avatar": {
+        "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+      },
+      "thread_avatar": {
+        "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+      }
+    },
+    "options": {
+      "admin": false,
+      "setup_complete": true,
+      "in_call": false,
+      "left_call": false,
+      "joined": false,
+      "kicked": false
+    }
+  }
+]
+```

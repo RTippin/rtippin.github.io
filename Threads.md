@@ -963,6 +963,338 @@
 ```
 ---
 ### GET `/api/messenger/threads/{thread}/avatar/{size}/{image}` | *api.messenger.threads.avatar.render*
+#### Response:
 ```
 Renders Group Avatar
+```
+---
+### GET `/api/messenger/threads/{thread}/load/messages|participants|mark-read` | *api.messenger.threads.loader*
+#### Response:
+```json
+{
+    "id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+    "type": 1,
+    "type_verbose": "PRIVATE",
+    "has_call": false,
+    "locked": false,
+    "pending": false,
+    "name": "Jane Doe",
+    "api_avatar": {
+        "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+    },
+    "avatar": {
+        "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+        "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+        "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+    },
+    "group": false,
+    "unread": false,
+    "unread_count": 0,
+    "created_at": "2020-12-08T04:09:01.000000Z",
+    "updated_at": "2020-12-08T04:47:41.000000Z",
+    "options": {
+        "admin": false,
+        "muted": false,
+        "add_participants": false,
+        "invitations": false,
+        "call": true,
+        "message": true,
+        "knock": true
+    },
+    "resources": {
+        "recipient": {
+            "name": "Jane Doe",
+            "route": null,
+            "provider_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+            "provider_alias": "user",
+            "base": {
+                "id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                "name": "Jane Doe",
+                "avatar": null,
+                "created_at": "2020-12-07T07:57:14.000000Z",
+                "updated_at": "2020-12-08T04:47:53.000000Z"
+            },
+            "options": {
+                "can_message_first": true,
+                "friendable": true,
+                "can_friend": true,
+                "searchable": true,
+                "can_search": true,
+                "online_status": 1,
+                "online_status_verbose": "ONLINE",
+                "friend_status": 1,
+                "friend_status_verbose": "FRIEND",
+                "last_active": "2020-12-08T04:47:53.000000Z",
+                "friend_id": "923136b9-01b1-45d3-a844-c351fa440141"
+            },
+            "api_avatar": {
+                "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+            },
+            "avatar": {
+                "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+            }
+        },
+        "participants": {
+            "data": [
+                {
+                    "id": "923135d4-c0f9-417d-ad5b-ac7812db1553",
+                    "admin": false,
+                    "pending": false,
+                    "send_knocks": false,
+                    "send_messages": true,
+                    "add_participants": false,
+                    "manage_invites": 0,
+                    "start_calls": false,
+                    "owner_id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                    "owner_type": "App\\Models\\User",
+                    "owner": {
+                        "name": "John Doe",
+                        "route": null,
+                        "provider_id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                        "provider_alias": "user",
+                        "base": {
+                            "id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                            "name": "John Doe",
+                            "avatar": "img_5fcee7c1e64404.55920965.jpg",
+                            "created_at": "2020-12-07T07:57:14.000000Z",
+                            "updated_at": "2020-12-08T04:47:42.000000Z"
+                        },
+                        "options": {
+                            "can_message_first": false,
+                            "friendable": false,
+                            "can_friend": false,
+                            "searchable": true,
+                            "can_search": true,
+                            "online_status": 1,
+                            "online_status_verbose": "ONLINE",
+                            "friend_status": 0,
+                            "friend_status_verbose": "NOT_FRIEND",
+                            "last_active": null
+                        },
+                        "api_avatar": {
+                            "sm": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/sm/img_5fcee7c1e64404.55920965.jpg",
+                            "md": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/md/img_5fcee7c1e64404.55920965.jpg",
+                            "lg": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/lg/img_5fcee7c1e64404.55920965.jpg"
+                        },
+                        "avatar": {
+                            "sm": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/sm/img_5fcee7c1e64404.55920965.jpg",
+                            "md": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/md/img_5fcee7c1e64404.55920965.jpg",
+                            "lg": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/lg/img_5fcee7c1e64404.55920965.jpg"
+                        }
+                    },
+                    "created_at": "2020-12-08T04:09:01.000000Z",
+                    "updated_at": "2020-12-08T04:47:48.000000Z",
+                    "last_read": {
+                        "time": "2020-12-08T04:47:48.000000Z",
+                        "message_id": "923143a8-aa8e-46d7-a601-b55c1d925aad"
+                    }
+                },
+                {
+                    "id": "923135d4-c1ae-422d-9ce6-88f8dfc6a822",
+                    "admin": false,
+                    "pending": false,
+                    "send_knocks": false,
+                    "send_messages": true,
+                    "add_participants": false,
+                    "manage_invites": 0,
+                    "start_calls": false,
+                    "owner_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                    "owner_type": "App\\Models\\User",
+                    "owner": {
+                        "name": "Jane Doe",
+                        "route": null,
+                        "provider_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                        "provider_alias": "user",
+                        "base": {
+                            "id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                            "name": "Jane Doe",
+                            "avatar": null,
+                            "created_at": "2020-12-07T07:57:14.000000Z",
+                            "updated_at": "2020-12-08T04:47:53.000000Z"
+                        },
+                        "options": {
+                            "can_message_first": true,
+                            "friendable": true,
+                            "can_friend": true,
+                            "searchable": true,
+                            "can_search": true,
+                            "online_status": 1,
+                            "online_status_verbose": "ONLINE",
+                            "friend_status": 1,
+                            "friend_status_verbose": "FRIEND",
+                            "last_active": "2020-12-08T04:47:53.000000Z",
+                            "friend_id": "923136b9-01b1-45d3-a844-c351fa440141"
+                        },
+                        "api_avatar": {
+                            "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                            "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                            "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                        },
+                        "avatar": {
+                            "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                            "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                            "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                        }
+                    },
+                    "created_at": "2020-12-08T04:09:01.000000Z",
+                    "updated_at": "2020-12-08T04:47:42.000000Z",
+                    "last_read": {
+                        "time": "2020-12-08T04:47:42.000000Z",
+                        "message_id": "923143a8-aa8e-46d7-a601-b55c1d925aad"
+                    }
+                }
+            ],
+            "meta": {
+                "index": true,
+                "page_id": null,
+                "next_page_id": null,
+                "next_page_route": null,
+                "final_page": true,
+                "per_page": 500,
+                "results": 2,
+                "total": 2
+            }
+        },
+        "messages": {
+            "data": [
+                {
+                    "id": "923143a8-aa8e-46d7-a601-b55c1d925aad",
+                    "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+                    "owner_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                    "owner_type": "App\\Models\\User",
+                    "owner": {
+                        "name": "Jane Doe",
+                        "route": null,
+                        "provider_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                        "provider_alias": "user",
+                        "base": {
+                            "id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                            "name": "Jane Doe",
+                            "avatar": null,
+                            "created_at": "2020-12-07T07:57:14.000000Z",
+                            "updated_at": "2020-12-08T04:47:53.000000Z"
+                        },
+                        "api_avatar": {
+                            "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                            "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                            "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                        },
+                        "avatar": {
+                            "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                            "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                            "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                        }
+                    },
+                    "type": 90,
+                    "type_verbose": "VIDEO_CALL",
+                    "system_message": true,
+                    "body": "was in a video call",
+                    "created_at": "2020-12-08T04:47:41.000000Z",
+                    "updated_at": "2020-12-08T04:47:41.000000Z",
+                    "meta": {
+                        "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+                        "thread_type": 1,
+                        "thread_type_verbose": "PRIVATE"
+                    }
+                },
+                {
+                    "id": "923135d4-c478-46aa-aed3-7013d9609e1d",
+                    "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+                    "owner_id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                    "owner_type": "App\\Models\\User",
+                    "owner": {
+                        "name": "John Doe",
+                        "route": null,
+                        "provider_id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                        "provider_alias": "user",
+                        "base": {
+                            "id": "922f8476-bdda-4ebd-b283-be23602c658d",
+                            "name": "John Doe",
+                            "avatar": "img_5fcee7c1e64404.55920965.jpg",
+                            "created_at": "2020-12-07T07:57:14.000000Z",
+                            "updated_at": "2020-12-08T04:47:42.000000Z"
+                        },
+                        "api_avatar": {
+                            "sm": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/sm/img_5fcee7c1e64404.55920965.jpg",
+                            "md": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/md/img_5fcee7c1e64404.55920965.jpg",
+                            "lg": "/api/messenger/images/user/922f8476-bdda-4ebd-b283-be23602c658d/lg/img_5fcee7c1e64404.55920965.jpg"
+                        },
+                        "avatar": {
+                            "sm": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/sm/img_5fcee7c1e64404.55920965.jpg",
+                            "md": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/md/img_5fcee7c1e64404.55920965.jpg",
+                            "lg": "/images/user/922f8476-bdda-4ebd-b283-be23602c658d/lg/img_5fcee7c1e64404.55920965.jpg"
+                        }
+                    },
+                    "type": 0,
+                    "type_verbose": "MESSAGE",
+                    "system_message": false,
+                    "body": "Hello!",
+                    "created_at": "2020-12-08T04:09:01.000000Z",
+                    "updated_at": "2020-12-08T04:09:01.000000Z",
+                    "meta": {
+                        "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+                        "thread_type": 1,
+                        "thread_type_verbose": "PRIVATE"
+                    }
+                }
+            ],
+            "meta": {
+                "index": true,
+                "page_id": null,
+                "next_page_id": null,
+                "next_page_route": null,
+                "final_page": true,
+                "per_page": 50,
+                "results": 2,
+                "total": 2
+            }
+        },
+        "latest_message": {
+            "id": "923143a8-aa8e-46d7-a601-b55c1d925aad",
+            "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+            "owner_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+            "owner_type": "App\\Models\\User",
+            "owner": {
+                "name": "Jane Doe",
+                "route": null,
+                "provider_id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                "provider_alias": "user",
+                "base": {
+                    "id": "922f8476-c5f4-4024-8ba2-1a0d1cd22d71",
+                    "name": "Jane Doe",
+                    "avatar": null,
+                    "created_at": "2020-12-07T07:57:14.000000Z",
+                    "updated_at": "2020-12-08T04:47:53.000000Z"
+                },
+                "api_avatar": {
+                    "sm": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                    "md": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                    "lg": "/api/messenger/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                },
+                "avatar": {
+                    "sm": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/sm/default.png",
+                    "md": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/md/default.png",
+                    "lg": "/images/user/922f8476-c5f4-4024-8ba2-1a0d1cd22d71/lg/default.png"
+                }
+            },
+            "type": 90,
+            "type_verbose": "VIDEO_CALL",
+            "system_message": true,
+            "body": "was in a video call",
+            "created_at": "2020-12-08T04:47:41.000000Z",
+            "updated_at": "2020-12-08T04:47:41.000000Z",
+            "meta": {
+                "thread_id": "923135d4-bcaa-4aa7-83a9-cc9765866b19",
+                "thread_type": 1,
+                "thread_type_verbose": "PRIVATE"
+            }
+        }
+    }
+}
 ```
